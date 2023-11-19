@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavVis Code Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        background-color: #EFF1F3;
+        font-family: 'Montserrat', sans-serif;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    p,
+    ul {
+        line-height: 1.5em;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .code {
+        font-family: monospace;
+        color: #EE2677;
+        font-size: 15px;
+    }
+</style>
+
+<body style="background-color: #EFF1F3;">
+
+    <h1 class="center">NavVis Code Challenge</h1>
+    <h1 class="center">Senior Software Engineer - Cloud</h1>
+
+    <p>Thank you for taking the time to implement the code challenge. Your implementation will be the base for a
+        more in depth technical discussion.</p>
+
+    <h2>Task 1: API Implementation</h2>
+    <h3>German phones parser</h3>
+    
+    <p><span class="code">Important</span>: The implementation should be in <span class="code">Terraform</span> and (<span class="code">C#</span> or <span class="code">Python</span>)</p>
+    <p>German phone numbers always start with <span class="code">+49</span> or <span class="code">0049</span> when
+        dialed from aboard. You should
+        build an API
+        which would filter through a file to keep only German phone numbers and store them for later retrieval. For
+        simplicity,
+        you should only consider phone numbers which have <span class="code">11</span> digits after <span
+            class="code">+49</span> or <span class="code">0049</span>. For example: <span
+            class="code">+4915201365263</span> or
+        <span class="code">004915201365263</span> are valid phone numbers.
+    </p>
+    <p>Your service should allow the following:</p>
+
+    <ul>
+        <li>Submit a file to the endpoint to be processed. This endpoint should return a Task ID which could be used to
+            fetch or delete the results. Example files are provided, see <span class="code">phone_numbers_1.txt</span>
+            <span class="code">phone_numbers_2.txt</span> <span class="code">phone_numbers_3.txt</span> <span
+                class="code">...</span>
+        </li>
+        <li>Using the Task ID, a user should be able to retrieve the results of the submitted file</li>
+        <li>Using the Task ID, a user should be allowed to delete the results associated to the Task ID</li>
+        <li>An endpoint to fetch all Task IDs</li>
+        <li>Be aware of duplicates.</li>
+    </ul>
+
+    <h2>Task 2: Testing</h2>
+    <p>Every good application should be tested. Please provide instructions on how to run the tests in a <span
+            class="code">README</span> file.</p>
+
+    <h2>Task 3: Deployment</h2>
+    <p>Now that you have your solution up and running. How would you deploy it?</p>
+    <ul>
+        <li>You have an AWS account: Please provide the script/code that deploys your app to AWS and the link to test
+            it live</li>
+        <li>You don't have an AWS account: Please describe how you would deploy your app in details.</li>
+    </ul>
+
+
+    <h2>Deliverable</h2>
+    <ul>
+        <li>A <span class="code">README</span> file which includes instructions on which links to open for testing the API and instructions on how to run the tests.</li>
+        <li>Please provide your source code as a zip file.</li>
+        <li>Optional: Postman collection for easy testing</li>
+    </ul>
+
+    <h2>Have fun!</h2>
+
+
+</body>
+
+</html>

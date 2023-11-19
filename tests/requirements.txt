@@ -1,0 +1,17 @@
+pytest
+pytest-mock
+pytest-socket
+pytest-env
+pytest-xdist
+coverage
+validators
+boto3
+aws-lambda-powertools~=2.14.0
+aws-lambda-powertools[parser]
+fastjsonschema
+pylint
+localstack~=2.2.0
+jsonschema
+aws-xray-sdk
+pydantic
+bandit

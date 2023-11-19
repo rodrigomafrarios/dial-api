@@ -1,0 +1,38 @@
+openapi: 3.0.1
+info:
+  title: Tasks REST-API
+  version: '1.00'
+servers:
+  - url: https://${api_url}
+paths:
+  /task:
+    post:
+      operationId: createTask
+      summary: Create a task
+      consumes:
+        - multipart/form-data
+      parameters:
+        - in: formData
+          name: upfile
+          type: file
+          required: true
+          description: The file to upload.
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  task_id:
+                    type: string
+
+        '400':
+          description: txt provided is a empty file or is not a txt
+
+  /task/{taskId}:
+    get:
+    delete:
+  /tasks:
+    get:
