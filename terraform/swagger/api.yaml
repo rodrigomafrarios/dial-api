@@ -1,4 +1,4 @@
-openapi: 3.0.1
+openapi: 3.0.2
 info:
   title: Tasks REST-API
   version: '1.00'
@@ -8,31 +8,119 @@ paths:
   /task:
     post:
       operationId: createTask
-      summary: Create a task
-      consumes:
-        - multipart/form-data
-      parameters:
-        - in: formData
-          name: upfile
-          type: file
-          required: true
-          description: The file to upload.
+      summary: It creates a task
+      requestBody:
+        required: true
+        content:
+          text/plain:
+            schema:
+              type: string
+              format: binary
+
       responses:
         '200':
-          description: Successful operation
+          $ref: '#/components/responses/CreateTaskResponse'
+
+        '400':
+          description: Bad Request
           content:
             application/json:
               schema:
                 type: object
                 properties:
-                  task_id:
+                  message:
                     type: string
-
-        '400':
-          description: txt provided is a empty file or is not a txt
+                    example: No german phone numbers provided.
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
   /task/{taskId}:
     get:
+      operationId: getByTaskId
+      summary: It gets phone numbers by task ID
+
+      parameters:
+        - in: path
+          name: taskId
+          schema:
+            type: string
+          required: true
+          description: UUID V4 ID of a task to get
+
+      responses:
+        '200':
+          $ref: '#/components/responses/GetByTaskIdResponse'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
     delete:
+      operationId: deleteTask
+      summary: It deletes a task by task ID
+      parameters:
+        - in: path
+          name: taskId
+          schema:
+            type: string
+          required: true
+          description: UUID V4 ID of a task to get
+
+      responses:
+        '204':
+          description: No Content
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
   /tasks:
     get:
+      operationId: getTasks
+      summary: It gets all task IDs
+      responses:
+        '200':
+          $ref: '#/components/responses/GetTasksResponse'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+components:
+  responses:
+    CreateTaskResponse:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              task_id:
+                type: string
+    GetByTaskIdResponse:
+      description: Successful operation
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              task:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 8fd3191b-a41c-442c-a1a8-60f7a39f9cab
+                  phone_numbers:
+                    type: array
+                    items:
+                      type: string
+                      example: +4915201365263
+    GetTasksResponse:
+      description: Successful operation
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              task_ids:
+                type: array
+                items:
+                  type: string
+                  example: 8fd3191b-a41c-442c-a1a8-60f7a39f9cab
+
+    InternalServerError:
+      description: 'Internal Server Error'

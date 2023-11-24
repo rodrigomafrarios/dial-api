@@ -26,13 +26,6 @@ resource "aws_s3_object" "common_helpers_layer_file" {
   ]
 }
 
-resource "aws_s3_bucket" "tf_backend" {
-  bucket = "${var.env}-${var.name}-terraform-backend"
-  force_destroy = var.env == "dev" ? true : false
-
-  tags = var.tags
-}
-
 resource "aws_s3_bucket" "swagger_bucket" {
   bucket = "${var.env}-${var.name}-swagger-bucket"
   force_destroy = var.env == "dev" ? true : false
@@ -47,14 +40,6 @@ resource "aws_s3_bucket_website_configuration" "swagger_bucket_website" {
 
   error_document {
     key = "index.html"
-  }
-}
-
-resource "aws_s3_bucket_versioning" "tf_backend_bucket_versionning" {
-  bucket = aws_s3_bucket.tf_backend.id
-  
-    versioning_configuration {
-    status = "Enabled"
   }
 }
 

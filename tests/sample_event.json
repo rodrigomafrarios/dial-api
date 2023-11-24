@@ -1,0 +1,111 @@
+{
+	"resource": "/{proxy+}",
+	"path": "/tasks",
+	"httpMethod": "GET",
+	"headers": {
+		"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+		"Accept-Encoding": "gzip, deflate, br",
+		"Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8",
+		"cache-control": "max-age=0",
+		"CloudFront-Forwarded-Proto": "https",
+		"CloudFront-Is-Desktop-Viewer": "true",
+		"CloudFront-Is-Mobile-Viewer": "false",
+		"CloudFront-Is-SmartTV-Viewer": "false",
+		"CloudFront-Is-Tablet-Viewer": "false",
+		"CloudFront-Viewer-ASN": "8767",
+		"CloudFront-Viewer-Country": "DE",
+		"Cookie": "awsccc=eyJlIjoxLCJwIjoxLCJmIjoxLCJhIjoxLCJpIjoiOWU5Yjk1YjMtOTdhYi00NzJiLWFmMWQtYWU0YTlhZDY3ZWY4IiwidiI6IjEifQ==",
+		"Host": "xqro36n0ca.execute-api.eu-central-1.amazonaws.com",
+		"sec-ch-ua": "\"Google Chrome\";v=\"119\", \"Chromium\";v=\"119\", \"Not?A_Brand\";v=\"24\"",
+		"sec-ch-ua-mobile": "?0",
+		"sec-ch-ua-platform": "\"macOS\"",
+		"sec-fetch-dest": "document",
+		"sec-fetch-mode": "navigate",
+		"sec-fetch-site": "none",
+		"sec-fetch-user": "?1",
+		"upgrade-insecure-requests": "1",
+		"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+		"Via": "2.0 d45f06116647d4cd21c9ad69cb1b14fc.cloudfront.net (CloudFront)",
+		"X-Amz-Cf-Id": "d-tZ1FCxGpy3pLLP2uKpEC6Z8DzUyMr41GG_u_v5rVh76VeyKcHgYg==",
+		"X-Amzn-Trace-Id": "Root=1-655dfb29-785fa5de121dcf3e3ff106af",
+		"X-Forwarded-For": "62.216.211.249, 130.176.218.165",
+		"X-Forwarded-Port": "443",
+		"X-Forwarded-Proto": "https"
+	},
+	"multiValueHeaders": {
+		"Accept": [
+			"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+		],
+		"Accept-Encoding": ["gzip, deflate, br"],
+		"Accept-Language": ["en-GB,en-US;q=0.9,en;q=0.8"],
+		"cache-control": ["max-age=0"],
+		"CloudFront-Forwarded-Proto": ["https"],
+		"CloudFront-Is-Desktop-Viewer": ["true"],
+		"CloudFront-Is-Mobile-Viewer": ["false"],
+		"CloudFront-Is-SmartTV-Viewer": ["false"],
+		"CloudFront-Is-Tablet-Viewer": ["false"],
+		"CloudFront-Viewer-ASN": ["8767"],
+		"CloudFront-Viewer-Country": ["DE"],
+		"Cookie": [
+			"awsccc=eyJlIjoxLCJwIjoxLCJmIjoxLCJhIjoxLCJpIjoiOWU5Yjk1YjMtOTdhYi00NzJiLWFmMWQtYWU0YTlhZDY3ZWY4IiwidiI6IjEifQ=="
+		],
+		"Host": ["xqro36n0ca.execute-api.eu-central-1.amazonaws.com"],
+		"sec-ch-ua": [
+			"\"Google Chrome\";v=\"119\", \"Chromium\";v=\"119\", \"Not?A_Brand\";v=\"24\""
+		],
+		"sec-ch-ua-mobile": ["?0"],
+		"sec-ch-ua-platform": ["\"macOS\""],
+		"sec-fetch-dest": ["document"],
+		"sec-fetch-mode": ["navigate"],
+		"sec-fetch-site": ["none"],
+		"sec-fetch-user": ["?1"],
+		"upgrade-insecure-requests": ["1"],
+		"User-Agent": [
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+		],
+		"Via": ["2.0 d45f06116647d4cd21c9ad69cb1b14fc.cloudfront.net (CloudFront)"],
+		"X-Amz-Cf-Id": ["d-tZ1FCxGpy3pLLP2uKpEC6Z8DzUyMr41GG_u_v5rVh76VeyKcHgYg=="],
+		"X-Amzn-Trace-Id": ["Root=1-655dfb29-785fa5de121dcf3e3ff106af"],
+		"X-Forwarded-For": ["62.216.211.249, 130.176.218.165"],
+		"X-Forwarded-Port": ["443"],
+		"X-Forwarded-Proto": ["https"]
+	},
+	"queryStringParameters": null,
+	"multiValueQueryStringParameters": null,
+	"pathParameters": {
+		"proxy": ""
+	},
+	"stageVariables": null,
+	"requestContext": {
+		"resourceId": "o4z0xk",
+		"resourcePath": "/{proxy+}",
+		"httpMethod": "GET",
+		"extendedRequestId": "OzQueErjliAEJlA=",
+		"requestTime": "22/Nov/2023:12:59:21 +0000",
+		"path": "/default",
+		"accountId": "089451748452",
+		"protocol": "HTTP/1.1",
+		"stage": "default",
+		"domainPrefix": "xqro36n0ca",
+		"requestTimeEpoch": 1700657961137,
+		"requestId": "be01ee00-c7ea-47fc-914c-1b4c3f568714",
+		"identity": {
+			"cognitoIdentityPoolId": null,
+			"accountId": null,
+			"cognitoIdentityId": null,
+			"caller": null,
+			"sourceIp": "62.216.211.249",
+			"principalOrgId": null,
+			"accessKey": null,
+			"cognitoAuthenticationType": null,
+			"cognitoAuthenticationProvider": null,
+			"userArn": null,
+			"userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+			"user": null
+		},
+		"domainName": "xqro36n0ca.execute-api.eu-central-1.amazonaws.com",
+		"apiId": "xqro36n0ca"
+	},
+	"body": null,
+	"isBase64Encoded": false
+}

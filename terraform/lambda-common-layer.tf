@@ -8,8 +8,10 @@ resource "null_resource" "deploy_lambda_common_layer_config" {
       "rm -f ./common_helpers_layer.zip",
       "rm -rf ./layers",
       "mkdir -p ./layers/python/src/",
-      "cp -r ../api/helpers/* ./layers/python/src/",
+      "cp -r ../src/* ./layers/python/src/",
       "mkdir -p ./layers/python/lib/python3.10/site-packages",
+      "cd layers/python/src",
+      "pip install -r requirements.txt -t ../lib/python3.10/site-packages",
     ])
   }
 }

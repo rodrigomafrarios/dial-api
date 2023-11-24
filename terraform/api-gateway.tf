@@ -58,7 +58,7 @@ resource "aws_api_gateway_deployment" "rest_api_deployment" {
   stage_name  = "temporary"
   stage_description = "${md5(
     format("%s%s",
-      file("${path.module}/api_gateway.tf"),
+      file("${path.module}/api-gateway.tf"),
       file("${path.module}/apigateway-integration.tf"),
     )
   )}"
@@ -77,7 +77,7 @@ resource "aws_api_gateway_deployment" "rest_api_deployment" {
 resource "aws_api_gateway_stage" "rest_api_stage" {
   deployment_id = aws_api_gateway_deployment.rest_api_deployment.id
   rest_api_id   = aws_api_gateway_rest_api.rest_api.id
-  stage_name    = "default"
+  stage_name    = "${var.env}"
   xray_tracing_enabled = true
 
   access_log_settings {

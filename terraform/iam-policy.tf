@@ -81,7 +81,7 @@ resource "aws_iam_policy" "main_policy" {
     "Version" : "2012-10-17",
     "Statement": [
       {
-        "Action": ["dynamodb:Query", "dynamodb:PutItem", "dynamodb:UpdateItem", "dynamodb:GetItem", "dynamodb:DeleteItem"],
+        "Action": ["dynamodb:Query", "dynamodb:PutItem", "dynamodb:UpdateItem", "dynamodb:GetItem", "dynamodb:DeleteItem", "dynamodb:DescribeTable", "dynamodb:Scan", "dynamodb:BatchWriteItem"],
         "Effect": "Allow",
         "Resource": [
           aws_dynamodb_table.task_table.arn,
@@ -99,6 +99,15 @@ resource "aws_iam_policy" "main_policy" {
         "Effect": "Allow",
         "Resource": [
             aws_kms_key.dynamodb_key.arn
+        ]
+      },
+      {
+        "Action": [
+          "events:*"
+        ],
+        "Effect": "Allow",
+        "Resource": [
+          aws_cloudwatch_event_bus.event_bus.arn
         ]
       }
     ]
