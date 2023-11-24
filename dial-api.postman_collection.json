@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "c27d88a5-514e-4dfc-822d-6d952afb9ab5",
+		"name": "dial-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3085440"
+	},
+	"item": [
+		{
+			"name": "Create task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "file"
+				},
+				"url": {
+					"raw": "https://xqro36n0ca.execute-api.eu-central-1.amazonaws.com/dev/task",
+					"protocol": "https",
+					"host": [
+						"xqro36n0ca",
+						"execute-api",
+						"eu-central-1",
+						"amazonaws",
+						"com"
+					],
+					"path": ["dev", "task"]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By Task Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://xqro36n0ca.execute-api.eu-central-1.amazonaws.com/dev/task/df7912e1-67cf-461b-a902-29d9e8073369",
+					"protocol": "https",
+					"host": [
+						"xqro36n0ca",
+						"execute-api",
+						"eu-central-1",
+						"amazonaws",
+						"com"
+					],
+					"path": ["dev", "task", "df7912e1-67cf-461b-a902-29d9e8073369"]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Task Ids",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://xqro36n0ca.execute-api.eu-central-1.amazonaws.com/dev/tasks",
+					"protocol": "https",
+					"host": [
+						"xqro36n0ca",
+						"execute-api",
+						"eu-central-1",
+						"amazonaws",
+						"com"
+					],
+					"path": ["dev", "tasks"]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://xqro36n0ca.execute-api.eu-central-1.amazonaws.com/dev/task/cd2587b5-b46a-4b04-befe-17eafd8dfcc2",
+					"protocol": "https",
+					"host": [
+						"xqro36n0ca",
+						"execute-api",
+						"eu-central-1",
+						"amazonaws",
+						"com"
+					],
+					"path": ["dev", "task", "cd2587b5-b46a-4b04-befe-17eafd8dfcc2"]
+				}
+			},
+			"response": []
+		}
+	]
+}

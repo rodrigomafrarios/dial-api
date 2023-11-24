@@ -21,3 +21,5 @@ venv
 **/*.zip
 
 **/layers
+
+__pycache__

@@ -94,7 +94,7 @@ OUTPUT: HTTP 200 - body: ["uuid4", "uuid4", "uuid4"]
 
 [dev]
 
-1. Create tf state bucket with the name: `dev-german-phone-parser-tf-backend`
+1. Create tf state bucket with the name: `dev-german-phone-parser-tf-backend` (or just comment state config for testing purposes)
 2. terraform init -backend-config=envs/dev/backend.dev.conf
 3. terraform plan -var-file=envs/dev/variables.dev.tfvars
 4. AWS_PROFILE=YOUR_PROFILE terraform apply -var-file=envs/dev/backend.dev.tfvars
@@ -107,3 +107,19 @@ The output `apigw_url` is the API Gateway Default Endpoint
 
 - It's possible to check the API documentation calling the route `/api-docs/index.html`
 - Example URL: `https://apiId.execute-api.eu-central-1.amazonaws.com/dev/api-docs/index.html`
+
+# Tests
+
+Python 3.10
+
+1. make install (Install dependencies)
+
+- obs: The integration tests are running with [localstack](https://pypi.org/project/localstack/)
+
+make test (Run all tests)
+make unit (Run only unit tests)
+make integration (Run only integration tests)
+
+# Postman Collection
+
+[postman-collection](dial-api.postman_collection.json)
